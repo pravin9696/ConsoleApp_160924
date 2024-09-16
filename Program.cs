@@ -2,6 +2,32 @@
 {
     class Solutions
     {
+        public void Pattern1()
+        {
+            int space_count = 5;
+            for (int i = 1; i <= 4; i++)
+            {
+                for (int j = 1; j <=7; j++)
+                {
+                    if (j <= i || j>=8-i)
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    {
+                        //space logic
+                        if(j<=space_count+1)
+                        { 
+                            Console.Write(" ");
+                        }
+                        
+                    }
+                }
+                space_count -= 1;
+
+                Console.WriteLine();
+            }
+        }
         public void Series2()
         {
             int n1 = 2;//even place
@@ -61,9 +87,10 @@
         {
             Solutions s1 = new Solutions();
             // s1.DigitOccurenceInNumber();
-            s1.Series1();
-            Console.WriteLine("\n-----------------\n");
-            s1.Series2();
+            //s1.Series1();
+            //Console.WriteLine("\n-----------------\n");
+            //s1.Series2();
+            s1.Pattern1();
         }
     }
 }
